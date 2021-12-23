@@ -1,0 +1,33 @@
+<head>
+  <title>welcome to link yt</title>
+  </head>
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<form class="form-download" method="get" id="download" action="http://youtube-download.bl.ee/getvideo.php">
+  <link <h1 class="form-download-heading"><b>HELLO GUYS WELCOME TO LINK YT WHERE U GUYS CAN DOWNLOAD YOUTUBE VEDIOs </b></h1>
+  <div class="input-group">
+    <span class="input-group-addon">https://www.youtube.com/watch?v=</span>
+    <input type="text" class="form-control" name="videoid" id="videoid" size="30" placeholder="Video ID">
+  </div>
+  <span class="help-block">Put in just the ID bit, the part after v=.</span>
+  <input class="btn btn-primary btn-lg btn-block" type="submit" name="type" id="type" value="Download">
+  <span class="help-block">Example: https://www.youtube.com/watch?v=<b>x0Er5zX_sCw</b></span>
+
+  <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/tweet_button.1400006231.html#_=1400685364461&amp;count=horizontal&amp;hashtags=YouTubeDownloaderfree&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fyoutube-download.bl.ee%2Findex.php&amp;size=m&amp;text=Youtube%20Downloader&amp;url=http%3A%2F%2Fyoutube-download.bl.ee%2Findex.php&amp;via=ChIsmael12" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-redered="true" style="width: 110px; height: 20px;"></iframe>
+  <h2>THANK YOU FOR COMING </h2>
+  <h4>made by NIRANJAN </h4>
+  
+  <?php
+ 
+
+if(isset($_GET['id']) )
+{
+	$youtube_id = $_GET['id'];
+
+	$youtube_video_info = file_get_contents('https://www.youtube.com/get_video_info?html5=1&video_id='.$youtube_id);
+
+	echo $youtube_video_info;
+}
+
+?>
